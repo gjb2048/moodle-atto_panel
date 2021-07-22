@@ -31,4 +31,4 @@ $plugin->maturity  = MATURITY_ALPHA;
 // Human readable version information.
 $plugin->release   = '1.0';
 // Won't be any use without the filter.
-$plugin->dependencies = array('filter_simplefilter'=>2020022801);
+$plugin->dependencies = array('filter_simplefilter' => 2020022801);

@@ -24,37 +24,40 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-
 /**
- * Initialise this plugin
+ * Initialise this plugin.
+ *
  * @param string $elementid
  */
 function atto_panel_strings_for_js() {
     global $PAGE;
 
-
-    $PAGE->requires->strings_for_js(array('insert',
-                                          'cancel',
-                                          'content',
-                                          'content_desc',
-                                          'defaultcontent',
-                                          'dialogtitle'),
-                                          'atto_panel');
+    $PAGE->requires->strings_for_js(
+        array(
+            'insert',
+            'cancel',
+            'content',
+            'content_desc',
+            'defaultcontent',
+            'dialogtitle'),
+        'atto_panel');
 }
 
 /**
  * Return the js params required for this module.
+ *
  * @return array of additional params to pass to javascript init function for this module.
  */
-function atto_panel_params_for_js(/*$elementid, $options, $fpoption^*/) {
+function atto_panel_params_for_js() {
 
-	//config our array of data.
-	$params = array();
+    // Config our array of data.
+    $params = array();
 
-    // Get the configured start and end tags from Simple panel
+    // Get the configured start and end tags from Simple panel.
     $def_config = get_config('filter_simplefilter');
     $params['starttag'] = $def_config->starttag;
     $params['endtag'] = $def_config->endtag;
+
     return $params;
 }
 
