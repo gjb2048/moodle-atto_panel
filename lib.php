@@ -15,14 +15,13 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Atto button insert panel - based on a template by Justin Hunt
+ * Atto button insert panel - based on a template by Justin Hunt.
  *
  * @package    atto_panel
  * @copyright  Richard Jones {@link http://richardnz.net/}
+ * @copyright  2023 G J Barnard - {@link http://moodle.org/user/profile.php?id=442195}.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
-defined('MOODLE_INTERNAL') || die();
 
 /**
  * Initialise this plugin.
@@ -54,9 +53,9 @@ function atto_panel_params_for_js() {
     $params = array();
 
     // Get the configured start and end tags from Simple panel.
-    $def_config = get_config('filter_simplefilter');
-    $params['starttag'] = $def_config->starttag;
-    $params['endtag'] = $def_config->endtag;
+    $config = get_config('filter_simplefilter');
+    $params['starttag'] = $config->starttag;
+    $params['endtag'] = $config->endtag;
 
     return $params;
 }
