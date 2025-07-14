@@ -25,12 +25,12 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2023011200;
-$plugin->requires  = 2022112800.00; // Moodle 4.1 (Build: 20221128).
-$plugin->supported = array(401, 401);
+$plugin->version   = 2025071400;
+$plugin->requires = 2024100700.00; // 4.5 (Build: 20241007).
+$plugin->supported = [405, 405];
 $plugin->component = 'atto_panel';
 $plugin->maturity  = MATURITY_STABLE;
 // Human readable version information.
-$plugin->release   = '401.1.0';
+$plugin->release   = '405.1.0';
 // Won't be any use without the filter.
-$plugin->dependencies = array('filter_simplefilter' => 2023011200);
+$plugin->dependencies = ['filter_simplefilter' => 2025071400];

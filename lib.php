@@ -32,13 +32,14 @@ function atto_panel_strings_for_js() {
     global $PAGE;
 
     $PAGE->requires->strings_for_js(
-        array(
+        [
             'insert',
             'cancel',
             'content',
             'content_desc',
             'defaultcontent',
-            'dialogtitle'),
+            'dialogtitle',
+        ],
         'atto_panel');
 }
 
@@ -50,7 +51,7 @@ function atto_panel_strings_for_js() {
 function atto_panel_params_for_js() {
 
     // Config our array of data.
-    $params = array();
+    $params = [];
 
     // Get the configured start and end tags from Simple panel.
     $config = get_config('filter_simplefilter');
